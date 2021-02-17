@@ -8,7 +8,7 @@ public class LogicNot {
     public static boolean isPositive(int num) {
         return num > 0;
     }
-
+    
     public static boolean notEven(int num) {
         return !isEven(num);
     }
@@ -38,7 +38,7 @@ public class LogicNot {
         boolean result5 = LogicNot.isEven(a);
         System.out.println(a + " Is even " + result5);
         boolean result6 = LogicNot.isPositive(a);
-        System.out.println(a + " Is positive " + result6);
+        System.out.println(a + " Is positive  " + result6);
     }
 
 }
