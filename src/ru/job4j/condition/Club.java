@@ -1,9 +1,10 @@
 package ru.job4j.condition;
 
-public class Cinema {
-        public static void permission(boolean allowByParent, boolean hasMoney) {
-            if (allowByParent && hasMoney) {
-                System.out.println("I can go to the cinema.");
+public class Club {
+
+        public static void permission(boolean hasMoney, boolean beFriend) {
+            if (hasMoney || beFriend) {
+                System.out.println("I can go to the club.");
             } else {
                 System.out.println("I can't.");
             }
