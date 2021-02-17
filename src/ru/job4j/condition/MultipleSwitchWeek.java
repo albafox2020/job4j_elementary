@@ -9,7 +9,7 @@ public class MultipleSwitchWeek {
             case "Четвер", "Thursday" -> String.valueOf(4);
             case "Пятница", "Friday" -> String.valueOf(5);
             case "Суббота", "Saturday" -> String.valueOf(6);
-            case "Воскресенье", "Sunday " -> String.valueOf(7);
+            case "Воскресенье", "Sunday" -> String.valueOf(7);
             default -> String.valueOf(-1);
         };
     }
