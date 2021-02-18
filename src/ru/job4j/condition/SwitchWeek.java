@@ -26,7 +26,8 @@ public class SwitchWeek {
                 name = "Воскресенье";
                 break;
             default:
-                throw new IllegalStateException("Unexpected value: " + day);
+                name = "Ошибка";
+                break;
         }
         return name;
     }
