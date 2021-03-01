@@ -9,13 +9,12 @@ public class Machine {
         int size = 0;
         int lost = money - price;
         for (int i = 0; i < coins.length; i++) {
-            if (lost < coins[size]) {
+            if (lost == 0) {
                 break;
-            } else {
-                while (lost >= coins[size]) {
-                    lost = lost - coins[size];
-                    rsl[size] = coins[size];
-                }
+            }
+            while (lost >= coins[i]) {
+                lost = lost - coins[i];
+                rsl[i] = coins[i];
             }
             size++;
         }
