@@ -8,7 +8,7 @@ public class Machine {
         int[] rsl = new int[100];
         int size = 0;
         int lost = money - price;
-        for (size = 0; size < coins.length; size++) {
+        for (int i = 0; i < coins.length; i++) {
             if (lost < coins[size]) {
                 break;
             } else {
@@ -17,6 +17,7 @@ public class Machine {
                     rsl[size] = coins[size];
                 }
             }
+            size++;
         }
         return Arrays.copyOf(rsl, size);
     }
