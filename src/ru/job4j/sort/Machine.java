@@ -14,9 +14,8 @@ public class Machine {
             }
             while (lost >= coins[i]) {
                 lost = lost - coins[i];
-                rsl[i] = coins[i];
+                rsl[size++] = coins[i];
             }
-            size++;
         }
         return Arrays.copyOf(rsl, size);
     }
