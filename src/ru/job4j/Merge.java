@@ -5,21 +5,15 @@ public class Merge {
         int[] rsl = new int[left.length + right.length];
         int i = 0;
         int j = 0;
-        int count = 0;
-        while (i < left.length && j < right.length) {
-            if (left[i] <= right[j]) {
-                rsl[count++] = left[i++];
-            } else {
-                rsl[count++] = right[j++];
-            }
-        }
-        if (i == left.length) {
-            while (j < right.length) {
-                rsl[count++] = right[j++];
-            }
-        } else {
-            while (i < left.length) {
-                rsl[count++] = right[j++];
+        for (int count = 0; count < rsl.length; count++) {
+            if (i == left.length) {
+                rsl[count] = right[j++];
+            } else if (j == right.length) {
+                rsl[count] = right[j++];
+            } else if (left[i] <= right[j]) {
+                rsl[count] = left[i++];
+            } else if (left[i] > right[j]) {
+                    rsl[count] = right[j++];
             }
         }
         return rsl;
